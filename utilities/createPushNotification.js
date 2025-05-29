@@ -1,10 +1,10 @@
 const { sendNotification } = require("./pushNotifications");
 
-async function sendPushNotificationOfChat(token, from, message, data){
+async function sendPushNotificationOfChat(token, from, message){
     sendNotification(token, {
         title: `New message from ${from}`,
         body: message,
-        data: { type: 'chat', ...data } ,
+        //data: { type: 'chat', ...data } ,
       });
 }
 
