@@ -66,7 +66,7 @@ router.put("/update-image", auth, async (req, res) => {
     { new: true }
   ).select("-password -expoPushToken");
 
-  res.send({ success: true, data: user });
+  return res.send({ success: true, data: user });
 });
 
 module.exports = router;
