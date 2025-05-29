@@ -113,7 +113,7 @@ router.post("/", auth, async (req, res) => {
       user.expoPushToken,
       req.user.name,
       req.body.message,
-      { data: conversation }
+      // { data: conversation }
     );
 
     return res.status(200).send({ success: true, data: message });
