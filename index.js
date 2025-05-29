@@ -11,4 +11,4 @@ require("./startup/routes")(app);
 const port = process.env.PORT || 4000;
 const httpServer = app.listen(port, () => winston.info(`Listening to ${port}...`));
 
-require('./startup/socket')(app, httpServer);
+require('./startup/socket')(app, httpServer,"");
